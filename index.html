@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preload" href="../fonts/Roboto-Regular.ttf"" as="font" >
+    <script src="./js/script.js" defer></script>
+    <title>HEALY</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="brand">
+                <a href="javascript:void(0)">
+                    <svg class="brand__logo" width="46" height="63" viewBox="0 0 46 63">
+                        <g fill="none" fill-rule="nonzero">
+                            <path d="M23 24.883c-2.275 0-4.119 1.834-4.119 4.098v3.218h-3.233c-2.274 0-4.118 1.835-4.118 4.098 0 2.264 1.844 4.099 4.118 4.099h3.233v3.218c0 2.263 1.844 4.098 4.118 4.098s4.118-1.835 4.118-4.098v-3.218h3.233c2.275 0 4.118-1.835 4.118-4.099 0-2.263-1.843-4.098-4.118-4.098h-3.233v-3.218c0-2.264-1.844-4.098-4.118-4.098z"/>
+                            <g fill="#FFF">
+                                <path d="M23 49.46c-3.24 0-5.874-2.623-5.874-5.846v-1.471h-1.478c-3.238 0-5.873-2.622-5.873-5.845s2.635-5.846 5.873-5.846h1.478v-1.47c0-3.224 2.635-5.846 5.873-5.846 3.239 0 5.873 2.622 5.873 5.845v1.471h1.479c3.238 0 5.873 2.623 5.873 5.846s-2.635 5.845-5.873 5.845h-1.479v1.471c0 3.223-2.634 5.845-5.873 5.845zm-7.352-15.514a2.36 2.36 0 0 0-2.363 2.351 2.36 2.36 0 0 0 2.363 2.352h3.233c.97 0 1.755.782 1.755 1.747v3.218A2.36 2.36 0 0 0 23 45.965a2.36 2.36 0 0 0 2.363-2.351v-3.218c0-.965.786-1.747 1.755-1.747h3.233a2.36 2.36 0 0 0 2.363-2.352 2.36 2.36 0 0 0-2.363-2.351h-3.233c-.97 0-1.755-.782-1.755-1.747v-3.218a2.36 2.36 0 0 0-2.363-2.352 2.36 2.36 0 0 0-2.363 2.352v3.218c0 .965-.785 1.747-1.755 1.747h-3.233z"/>
+                                <path d="M23 62.34c-6.237 0-11.997-2.332-16.218-6.565C2.454 51.435.07 45.362.07 38.675c0-15.114 15.865-32.708 20.728-37.74.58-.6 1.36-.932 2.197-.935h.01c.832 0 1.61.327 2.192.921.817.835 2.115 2.199 3.665 3.958.639.726.566 1.83-.163 2.465a1.76 1.76 0 0 1-2.477-.162 103.096 103.096 0 0 0-3.215-3.49C19.085 7.802 3.58 24.925 3.58 38.675c0 11.688 8.167 20.171 19.418 20.171 11.252 0 19.418-8.483 19.418-20.17 0-8.604-5.885-18.285-10.823-24.891a1.741 1.741 0 0 1 .361-2.444 1.76 1.76 0 0 1 2.456.359C42.053 21.925 45.927 31 45.927 38.675c0 6.687-2.383 12.76-6.71 17.1-4.222 4.233-9.981 6.565-16.218 6.565z"/>
+                            </g>
+                        </g>
+                    </svg>    
+                </a>
+                
+            <a href="" class="brand__name">HEALY</a>    
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
+                <svg viewBox="0 0 100 80" width="20" height="20" fill="white">
+                    <rect width="100" height="20"></rect>
+                    <rect y="30" width="100" height="20"></rect>
+                    <rect y="60" width="100" height="20"></rect>
+                  </svg>
+              </a>
+            <nav  id="header__nav">
+                <a href="javascript:void(0)">Login</a>
+                <a href="javascript:void(0)">List Your Practice</a>
+            </nav>
+    
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero__form container">
+            <form action="" onsubmit="return false" class="hero__form row">
+                <div class="col_md_2 col_12">
+                    <input type="text" name="area" id="input_area" class=" col_md_3 col_12 " placeholder="Area" readonly>
+                    <ul class="dropdown__options" id="area_dropdown">
+                        <li onclick="selectOption(0,0)">Select None</li>
+                        <li onclick="selectOption(0,1)">Option 1</li>
+                        <li onclick="selectOption(0,2)">Option 2</li>
+                        <li onclick="selectOption(0,3)">Option 3</li>
+                    </ul>    
+                </div>
+                <div class="col_md_4 col_12">
+                    <input type="text" name="clinic" id="input_clinic" class=" col_md_3 col_12" 
+                    placeholder="Clinics, Hospitals, Doctors etc" readonly>
+                    <ul class="dropdown__options" id="clinic_dropdown">
+                        <li onclick="selectOption(1,0)">Select None</li>
+                        <li onclick="selectOption(1,1)">Option 1</li>
+                        <li onclick="selectOption(1,2)">Option 2</li>
+                        <li onclick="selectOption(1,3)">Option 3</li>
+                    </ul>
+                </div>
+                <div class="col_md_4 col_12">
+                    <input type="text" name="insurance" id="input_insurance" class=" col_md_3 col_12" 
+                    placeholder="Insurance plan and carrier" readonly>
+                    <ul class="dropdown__options" id="insurance_dropdown">
+                        <li onclick="selectOption(2,0)">Select None</li>
+                        <li onclick="selectOption(2,1)">Option 1</li>
+                        <li onclick="selectOption(2,2)">Option 2</li>
+                        <li onclick="selectOption(2,3)">Option 3</li>
+                    </ul> 
+                </div>
+                <button class="col_md_2 col_12 button_primary">
+                    <svg x="0px" y="0px" width="45px" height="45px"
+                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;fill:white" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M310,190c-5.52,0-10,4.48-10,10s4.48,10,10,10c5.52,0,10-4.48,10-10S315.52,190,310,190z"/>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M500.281,443.719l-133.48-133.48C388.546,277.485,400,239.555,400,200C400,89.72,310.28,0,200,0S0,89.72,0,200
+                                    s89.72,200,200,200c39.556,0,77.486-11.455,110.239-33.198l36.895,36.895c0.005,0.005,0.01,0.01,0.016,0.016l96.568,96.568
+                                    C451.276,507.838,461.319,512,472,512c10.681,0,20.724-4.162,28.278-11.716C507.837,492.731,512,482.687,512,472
+                                    S507.837,451.269,500.281,443.719z M305.536,345.727c0,0.001-0.001,0.001-0.002,0.002C274.667,368.149,238.175,380,200,380
+                                    c-99.252,0-180-80.748-180-180S100.748,20,200,20s180,80.748,180,180c0,38.175-11.851,74.667-34.272,105.535
+                                    C334.511,320.988,320.989,334.511,305.536,345.727z M326.516,354.793c10.35-8.467,19.811-17.928,28.277-28.277l28.371,28.371
+                                    c-8.628,10.183-18.094,19.65-28.277,28.277L326.516,354.793z M486.139,486.139c-3.78,3.78-8.801,5.861-14.139,5.861
+                                    s-10.359-2.081-14.139-5.861l-88.795-88.795c10.127-8.691,19.587-18.15,28.277-28.277l88.798,88.798
+                                    C489.919,461.639,492,466.658,492,472C492,477.342,489.919,482.361,486.139,486.139z"/>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M200,40c-88.225,0-160,71.775-160,160s71.775,160,160,160s160-71.775,160-160S288.225,40,200,40z M200,340
+                                    c-77.196,0-140-62.804-140-140S122.804,60,200,60s140,62.804,140,140S277.196,340,200,340z"/>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M312.065,157.073c-8.611-22.412-23.604-41.574-43.36-55.413C248.479,87.49,224.721,80,200,80c-5.522,0-10,4.478-10,10
+                                    c0,5.522,4.478,10,10,10c41.099,0,78.631,25.818,93.396,64.247c1.528,3.976,5.317,6.416,9.337,6.416
+                                    c1.192,0,2.405-0.215,3.584-0.668C311.472,168.014,314.046,162.229,312.065,157.073z"/>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <div class="additionals">
+            <div class="hero__card">
+                <img data-src="./images/hospital.svg" alt="" width="72" height="74" loading="lazy" class="lazy">
+                <p>Find Clinics and 
+                    Hospitals</p>
+            </div>
+            <div class="hero__card">
+                <img data-src="./images/hospital.svg" alt="" width="72" height="74" loading="lazy" class="lazy">
+                <p>Find Pharmacies</p>
+            </div>
+            <div class="hero__card">
+                <img data-src="./images/hospital.svg" alt="" width="72" height="74" loading="lazy" class="lazy">
+                <p>Read Health Articles</p>
+            </div>
+        </div>
+    </section>
+    <main>
+        <section class="howItWorks container">
+            <h2>How It Works</h2>
+            <div class="row">
+                <div class="howItWorks__content col_12 col_md_3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                        <g fill="none" fill-rule="nonzero">
+                            <path fill="#2D527C" d="M97.39 85.87a8.112 8.112 0 0 1 2.389 5.764 8.11 8.11 0 0 1-2.389 5.762 8.163 8.163 0 0 1-5.78 2.385 8.157 8.157 0 0 1-5.776-2.385L62.01 73.634a1.952 1.952 0 0 1 0-2.775l.952-.95-2.338-2.333c-6.743 5.186-14.861 7.78-22.976 7.78-9.646 0-19.292-3.66-26.633-10.984-14.685-14.646-14.685-38.479 0-53.125C25.7-3.4 49.595-3.4 64.28 11.247c13.52 13.487 14.59 34.761 3.213 49.481l2.336 2.33.952-.95a1.973 1.973 0 0 1 2.785 0L97.39 85.87zm-2.784 8.751a4.222 4.222 0 0 0 0-5.974l-22.43-22.374-5.99 5.974 22.43 22.374a4.25 4.25 0 0 0 5.99 0zM71.375 37.81c0-8.984-3.51-17.432-9.88-23.785-6.37-6.353-14.84-9.853-23.847-9.853-9.01 0-17.48 3.5-23.85 9.853C7.427 20.377 3.92 28.825 3.92 37.81c0 8.985 3.506 17.432 9.876 23.786 6.37 6.353 14.84 9.853 23.85 9.853 9.009 0 17.478-3.5 23.849-9.853 6.37-6.354 9.879-14.801 9.879-23.786zm-5.628 29.323l1.3-1.296-2.127-2.12c-.21.222-.425.44-.64.657-.218.217-.438.429-.659.638l2.126 2.12z"/>
+                            <path fill="#0093FF" d="M94.606 88.647a4.222 4.222 0 0 1 0 5.974 4.249 4.249 0 0 1-5.99 0l-22.43-22.374 5.99-5.974 22.43 22.374z"/>
+                            <path fill="#13BA8E" d="M61.496 14.024c6.37 6.353 9.879 14.801 9.879 23.785 0 8.985-3.51 17.432-9.88 23.786-6.37 6.353-14.84 9.853-23.847 9.853-9.01 0-17.48-3.5-23.85-9.853C7.427 55.24 3.92 46.794 3.92 37.809c0-8.984 3.506-17.432 9.876-23.785 6.37-6.353 14.84-9.853 23.85-9.853 9.009 0 17.478 3.5 23.849 9.853zm5.726 23.785c0-7.88-3.078-15.285-8.664-20.858-5.585-5.57-13.013-8.639-20.91-8.639-7.9 0-15.329 3.068-20.914 8.639-5.585 5.573-8.661 12.979-8.661 20.858 0 7.88 3.076 15.286 8.661 20.86 5.585 5.57 13.013 8.638 20.914 8.638 7.897 0 15.325-3.068 20.91-8.639 5.586-5.573 8.664-12.979 8.664-20.859zM67.046 65.836l-1.299 1.295-2.126-2.12c.22-.21.441-.421.66-.639.214-.217.43-.434.64-.657l2.125 2.12z"/>
+                            <path fill="#2D527C" d="M58.558 16.95c5.586 5.574 8.664 12.98 8.664 20.86 0 7.879-3.078 15.285-8.664 20.858-5.585 5.57-13.013 8.639-20.91 8.639-7.9 0-15.329-3.068-20.914-8.639C11.15 53.095 8.073 45.69 8.073 37.81c0-7.88 3.076-15.285 8.661-20.858 5.585-5.57 13.013-8.639 20.914-8.639 7.897 0 15.325 3.068 20.91 8.639zm-2.782 38.94c9.995-9.97 9.995-26.19 0-36.161-4.842-4.83-11.28-7.49-18.128-7.49-6.848 0-13.286 2.66-18.129 7.49-9.997 9.97-9.997 26.19 0 36.162 4.843 4.83 11.281 7.49 18.129 7.49 6.848 0 13.286-2.66 18.128-7.49z"/>
+                            <path fill="#000" d="M53.955 21.545a1.957 1.957 0 0 1 0 2.775 1.96 1.96 0 0 1-1.391.576 1.966 1.966 0 0 1-1.394-.576 19.136 19.136 0 0 0-3.598-2.822 1.962 1.962 0 0 1-.66-2.699 1.975 1.975 0 0 1 2.707-.657 23.275 23.275 0 0 1 4.336 3.403zM53.955 51.299a1.957 1.957 0 0 1 0 2.775c-4.37 4.358-10.184 6.74-16.27 6.74a23.49 23.49 0 0 1-2.77-.164 1.961 1.961 0 0 1-1.721-2.18 1.964 1.964 0 0 1 2.186-1.718c5.864.694 11.62-1.293 15.79-5.453a1.973 1.973 0 0 1 2.785 0zM41.212 15.082a1.963 1.963 0 1 1-.606 3.88c-6.019-.935-12.181 1.067-16.483 5.358a1.956 1.956 0 0 1-1.391.576 1.966 1.966 0 0 1-1.394-.576 1.957 1.957 0 0 1 0-2.775c5.189-5.175 12.617-7.589 19.874-6.463zM27.543 54.011a1.96 1.96 0 0 1-1.045 3.628 1.96 1.96 0 0 1-1.04-.296 23.188 23.188 0 0 1-4.12-3.27 1.957 1.957 0 0 1 0-2.774 1.973 1.973 0 0 1 2.785 0 19.184 19.184 0 0 0 3.42 2.712z"/>
+                        </g>
+                    </svg>
+                    <h3>Search</h3>
+                    <p>
+                        Search for a doctor or health specialist or enter a particular condition or procedure. We cover 47 medical specialities.
+                    </p>
+                </div>
+                <div class="howItWorks__content col_12 col_md_3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 87 100">
+                        <g fill="none" fill-rule="nonzero">
+                            <path fill="#FFF" d="M65.816 93.05a4.538 4.538 0 0 1-4.54 4.539H6.81a4.538 4.538 0 0 1-4.54-4.54V15.888a4.538 4.538 0 0 1 4.54-4.54h54.468a4.538 4.538 0 0 1 4.539 4.54V93.05z"/>
+                            <path fill="#000" d="M61.277 99.858H6.809A6.817 6.817 0 0 1 0 93.05V15.887a6.817 6.817 0 0 1 6.809-6.809h54.468a6.817 6.817 0 0 1 6.808 6.809V93.05a6.817 6.817 0 0 1-6.808 6.808zM6.809 13.617a2.273 2.273 0 0 0-2.27 2.27V93.05c0 1.25 1.02 2.27 2.27 2.27h54.468c1.25 0 2.27-1.02 2.27-2.27V15.887c0-1.251-1.02-2.27-2.27-2.27H6.809z"/>
+                            <path fill="#D8EFF7" d="M54.468 90.78H13.617a4.538 4.538 0 0 1-4.539-4.539V20.426h49.93V86.24a4.538 4.538 0 0 1-4.54 4.54z"/>
+                            <path fill="#0093FF" d="M56.738 20.426h-45.39v-4.54c0-7.52 6.095-13.616 13.616-13.616H43.12c7.521 0 13.617 6.096 13.617 13.617v4.539z"/>
+                            <path fill="#000" d="M56.738 22.695h-45.39a2.27 2.27 0 0 1-2.27-2.27v-4.538C9.078 7.127 16.204 0 24.964 0H43.12c8.76 0 15.887 7.126 15.887 15.887v4.539a2.27 2.27 0 0 1-2.27 2.27zm-43.121-4.539h40.851v-2.27c0-6.256-5.09-11.347-11.347-11.347H24.965c-6.258 0-11.348 5.09-11.348 11.348v2.269z"/>
+                            <circle cx="34.043" cy="11.347" r="2.27" fill="#000"/>
+                            <path fill="#000" d="M52.199 34.043H15.887a2.27 2.27 0 0 1 0-4.54h36.312a2.27 2.27 0 0 1 0 4.54zM34.043 45.39H15.887a2.27 2.27 0 0 1 0-4.539h18.156a2.27 2.27 0 0 1 0 4.539zM52.199 45.39H43.12a2.27 2.27 0 0 1 0-4.539H52.2a2.27 2.27 0 0 1 0 4.539zM52.199 56.738H34.043a2.27 2.27 0 0 1 0-4.54h18.156a2.27 2.27 0 0 1 0 4.54zM24.964 56.738h-9.078a2.27 2.27 0 0 1 0-4.54h9.079a2.27 2.27 0 0 1 0 4.54zM52.199 79.433H34.043a2.27 2.27 0 0 1 0-4.54h18.156a2.27 2.27 0 0 1 0 4.54zM24.964 79.433h-9.078a2.27 2.27 0 0 1 0-4.54h9.078a2.27 2.27 0 0 1 0 4.54zM34.043 68.085H15.887a2.27 2.27 0 0 1 0-4.539h18.156a2.27 2.27 0 0 1 0 4.54zM52.199 68.085H43.12a2.27 2.27 0 0 1 0-4.539H52.2a2.27 2.27 0 0 1 0 4.54z"/>
+                            <circle cx="65.816" cy="54.468" r="18.156" fill="#13BA8E"/>
+                            <path fill="#000" d="M65.816 74.894c-11.262 0-20.426-9.165-20.426-20.426s9.164-20.425 20.426-20.425c11.26 0 20.425 9.164 20.425 20.425 0 11.261-9.164 20.426-20.425 20.426zm0-36.313c-8.76 0-15.887 7.127-15.887 15.887 0 8.76 7.126 15.887 15.887 15.887 8.76 0 15.886-7.127 15.886-15.887 0-8.76-7.126-15.887-15.886-15.887z"/>
+                            <path fill="#000" d="M65.816 61.277c-.6 0-1.178-.236-1.605-.665l-6.808-6.809a2.267 2.267 0 0 1 0-3.209 2.267 2.267 0 0 1 3.209 0l4.752 4.752 5.313-8.855a2.269 2.269 0 1 1 3.892 2.335l-6.808 11.348a2.272 2.272 0 0 1-1.945 1.103z"/>
+                        </g>
+                    </svg>
+                    <h3>Compare</h3>
+                    <p>
+                        Compare medical centers using verified patient reviews and filter for distance, availability and insurer to 
+                        find the right doctor for you.                
+                    </p>
+                </div>
+                <div class="howItWorks__content col_12 col_md_3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 111 100">
+                        <g fill="none" fill-rule="nonzero">
+                            <path fill="#13BA8E" d="M107.538 47.022c-1.798-15.243-15.612-26.14-30.856-24.34-15.243 1.798-26.14 15.615-24.34 30.855a27.71 27.71 0 0 0 3.132 9.888l-5.513 14.019h24.198c2.898.617 5.936.802 9.041.434 15.24-1.798 26.137-15.612 24.338-30.856z"/>
+                            <path fill="#000" d="M80.01 80.564c-2.033 0-4.08-.207-6.11-.622H49.96c-.826 0-1.6-.41-2.063-1.092a2.485 2.485 0 0 1-.26-2.32l5.102-12.968a30.102 30.102 0 0 1-2.876-9.73c-.949-8.033 1.29-15.957 6.298-22.31 5.011-6.35 12.196-10.372 20.232-11.32 8.03-.948 15.955 1.288 22.31 6.3 6.352 5.01 10.37 12.195 11.319 20.228.949 8.034-1.29 15.958-6.298 22.31-5.011 6.35-12.196 10.372-20.232 11.322a30.047 30.047 0 0 1-3.482.202zm-26.382-5.618H74.16c.175 0 .35.017.52.055a25.25 25.25 0 0 0 8.226.397c6.712-.792 12.71-4.15 16.895-9.453 4.184-5.306 6.052-11.92 5.258-18.63-.79-6.71-4.147-12.708-9.453-16.892-5.303-4.184-11.926-6.05-18.628-5.26-6.712.79-12.71 4.148-16.894 9.452-4.184 5.306-6.053 11.92-5.258 18.63a25.097 25.097 0 0 0 2.852 8.996c.348.647.393 1.414.125 2.098l-4.174 10.607z"/>
+                            <path fill="#FFF" d="M91.056 44.722h-5.558v-5.558a5.558 5.558 0 1 0-11.116 0v5.558h-5.558a5.558 5.558 0 1 0 0 11.116h5.558v5.558a5.558 5.558 0 1 0 11.116 0v-5.558h5.558a5.558 5.558 0 1 0 0-11.116z"/>
+                            <path fill="#0093FF" d="M22.058 97.428l-5.943-3.035A24.984 24.984 0 0 1 2.498 72.148V27.785A24.976 24.976 0 0 1 16.115 5.54l5.943-3.038h12.915a4.995 4.995 0 0 1 4.996 4.996v14.988a4.995 4.995 0 0 1-4.996 4.996h-2.498c-5.519 0-9.993 4.474-9.993 9.993v24.98c0 5.519 4.474 9.993 9.993 9.993h2.498a4.995 4.995 0 0 1 4.996 4.996v14.988a4.995 4.995 0 0 1-4.996 4.996H22.058z"/>
+                            <path fill="#000" d="M34.973 99.926H22.058c-.395 0-.784-.095-1.137-.272l-5.943-3.035C5.741 91.9 0 82.522 0 72.148V27.785C0 17.411 5.74 8.033 14.978 3.315L20.921.278a2.5 2.5 0 0 1 1.137-.275h12.915c4.131 0 7.494 3.363 7.494 7.495v14.988c0 4.132-3.363 7.494-7.494 7.494h-2.499c-4.131 0-7.494 3.362-7.494 7.494v24.98c0 4.133 3.363 7.495 7.494 7.495h2.499c4.131 0 7.494 3.362 7.494 7.494v14.988c0 4.132-3.363 7.494-7.494 7.494zM22.657 94.93h12.316a2.5 2.5 0 0 0 2.498-2.498V77.444a2.5 2.5 0 0 0-2.498-2.498h-2.498c-6.887 0-12.49-5.603-12.49-12.49V37.475c0-6.887 5.603-12.49 12.49-12.49h2.498a2.5 2.5 0 0 0 2.498-2.498V7.498A2.5 2.5 0 0 0 34.973 5H22.657l-5.405 2.763C9.692 11.625 4.996 19.297 4.996 27.785v44.363c0 8.488 4.696 16.16 12.256 20.022l5.405 2.76z"/>
+                            <circle cx="29.977" cy="84.938" r="2.498" fill="#000"/>
+                            <circle cx="19.984" cy="82.44" r="2.498" fill="#000"/>
+                            <circle cx="29.977" cy="14.993" r="2.498" fill="#000"/>
+                            <circle cx="19.984" cy="17.491" r="2.498" fill="#000"/>
+                        </g>
+                    </svg>
+                    
+                    <h3>Call</h3>
+                    <p>
+                        After having found the right doctor and the insurance company, you can place 
+                        a phone call to the venue and manage 
+                        the booking.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="testimonial">
+            <div class="container">
+                <h2>Read Health Articles</h2>
+                <svg class="prev_icon disabled" x="0px" y="0px" width="10%" height="60" onclick="controlSlides('prev')"
+                viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+               <g>
+                   <g>
+                       <path d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933
+                           S370.893,0,238.933,0z M320.357,403.926c-6.167,7.128-16.945,7.907-24.073,1.739c-0.17-0.147-0.337-0.298-0.501-0.451
+                           l-170.667-153.6c-7.003-6.309-7.566-17.1-1.258-24.103c0.397-0.441,0.817-0.861,1.258-1.258l170.667-153.6
+                           c6.879-6.444,17.679-6.092,24.123,0.787c6.444,6.879,6.092,17.679-0.787,24.123c-0.164,0.154-0.331,0.304-0.501,0.451
+                           L162.133,238.933l156.484,140.919C325.746,386.02,326.524,396.798,320.357,403.926z"/>
+                   </g>
+               </g>
+           </svg>
+           <svg class="next_icon enabled" x="0px" y="0px"  width="10%" height="60" onclick="controlSlides('next')"x="0px" y="0px"
+           viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+                <g>
+                    <g>
+                        <path  d="M238.933,0C106.974,0,0,106.974,0,238.933s106.974,238.933,238.933,238.933s238.933-106.974,238.933-238.933
+                            S370.893,0,238.933,0z M354.009,250.356c-0.397,0.441-0.817,0.861-1.258,1.258l-170.667,153.6
+                            c-7.128,6.167-17.906,5.389-24.073-1.739c-5.996-6.93-5.449-17.357,1.238-23.622l156.57-140.919L159.249,98.014
+                            c-6.879-6.444-7.231-17.244-0.787-24.123c6.265-6.687,16.693-7.234,23.622-1.238l170.667,153.6
+                            C359.754,232.561,360.317,243.353,354.009,250.356z"/>
+                    </g>
+                </g>
+            </svg>
+      
+           <div class="testimonial__slider">
+               <div class="testimonial__slider__container">
+                   <div class="item">
+                    <img data-src="./images/doctorNew.webp" width="100%" height="200" loading="lazy" class="lazy" />
+                    <div class="item__content">
+                           <h5>Top Medical Proffessionals</h5>
+                           <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, 
+                               ad vidit minimum fabellas vel. Ea ius nisl detraxit salutatus
+                           </p>
+                           <span>Dr.John Doe</span>
+                           <a href="javascript:void(0)">Read More</a>
+                       </div>
+   
+                   </div>
+                   <div class="item">
+                    <img data-src="./images/doctorNew.webp" width="100%" height="200" loading="lazy" class="lazy" />
+                    <div class="item__content">
+                           <h5>Top Medical Proffessionals</h5>
+                           <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, 
+                               ad vidit minimum fabellas vel. Ea ius nisl detraxit salutatus
+                           </p>
+                           <span>Dr.John Doe</span>
+                           <a href="javascript:void(0)">Read More</a>
+                       </div>
+   
+                   </div>
+                   <div class="item">
+                    <img data-src="./images/doctorNew.webp" width="100%" height="200" loading="lazy" class="lazy" />
+                    <div class="item__content">
+                           <h5>Top Medical Proffessionals</h5>
+                           <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, 
+                               ad vidit minimum fabellas vel. Ea ius nisl detraxit salutatus
+                           </p>
+                           <span>Dr.John Doe</span>
+                           <a href="javascript:void(0)">Read More</a>
+                       </div>
+   
+                   </div>
+                   <div class="item">
+                    <img data-src="./images/doctorNew.webp" width="100%" height="200" loading="lazy" class="lazy" />
+                    <div class="item__content">
+                           <h5>Top Medical Proffessionals</h5>
+                           <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, 
+                               ad vidit minimum fabellas vel. Ea ius nisl detraxit salutatus
+                           </p>
+                           <span>Dr.John Doe</span>
+                           <a href="javascript:void(0)">Read More</a>
+                       </div>
+   
+                   </div>
+                   <div class="item">
+                    <img data-src="./images/doctorNew.webp" width="100%" height="200" loading="lazy" class="lazy" />
+                    <div class="item__content">
+                           <h5>Top Medical Proffessionals</h5>
+                           <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, 
+                               ad vidit minimum fabellas vel. Ea ius nisl detraxit salutatus
+                           </p>
+                           <span>Dr.John Doe</span>
+                           <a href="javascript:void(0)">Read More</a>
+                       </div>
+   
+                   </div>
+                   <div class="item">
+                    <img data-src="./images/doctorNew.webp" width="100%" height="200" loading="lazy" class="lazy" />
+                    <div class="item__content">
+                           <h5>Top Medical Proffessionals</h5>
+                           <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, 
+                               ad vidit minimum fabellas vel. Ea ius nisl detraxit salutatus
+                           </p>
+                           <span>Dr.John Doe</span>
+                           <a href="javascript:void(0)">Read More</a>
+                       </div>
+   
+                   </div>
+                   <div class="item">
+                    <img data-src="./images/doctorNew.webp" width="100%" height="200" loading="lazy" class="lazy" />
+                    <div class="item__content">
+                           <h5>Top Medical Proffessionals</h5>
+                           <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, 
+                               ad vidit minimum fabellas vel. Ea ius nisl detraxit salutatus
+                           </p>
+                           <span>Dr.John Doe</span>
+                           <a href="javascript:void(0)">Read More</a>
+                       </div>
+   
+                   </div>
+                   <div class="item">
+                    <img data-src="./images/doctorNew.webp" width="100%" height="200" loading="lazy" class="lazy" />
+                    <div class="item__content">
+                           <h5>Top Medical Proffessionals</h5>
+                           <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, 
+                               ad vidit minimum fabellas vel. Ea ius nisl detraxit salutatus
+                           </p>
+                           <span>Dr.John Doe</span>
+                           <a href="javascript:void(0)">Read More</a>
+                       </div>
+   
+                   </div>
+                   <div class="item">
+                    <img data-src="./images/doctorNew.webp" width="100%" height="200" loading="lazy" class="lazy" />
+                    <div class="item__content">
+                           <h5>Top Medical Proffessionals</h5>
+                           <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, 
+                               ad vidit minimum fabellas vel. Ea ius nisl detraxit salutatus
+                           </p>
+                           <span>Dr.John Doe</span>
+                           <a href="javascript:void(0)">Read More</a>
+                       </div>
+                   </div>
+                   <div class="item">
+                    <img data-src="./images/doctorNew.webp" width="100%" height="200" loading="lazy" class="lazy" />
+                    <div class="item__content">
+                           <h5>Top Medical Proffessionals</h5>
+                           <p>Lorem ipsum dolor sit amet, an velit scaevola per. Sea eu probo primis, 
+                               ad vidit minimum fabellas vel. Ea ius nisl detraxit salutatus
+                           </p>
+                           <span>Dr.John Doe</span>
+                           <a href="javascript:void(0)">Read More</a>
+                       </div>
+                   </div>
+               </div>
+           </div>    
+            </div>            
+        </section>
+        <section class="launch">
+            <div class="container">
+                <div class="launch_img">
+                    <img data-src="./images/phone.webp" alt="" height="590" width="100%" loading="lazy" class="lazy">
+                </div>
+                <div class="launch__content">
+                    <h2>We are launching our App Soon!</h2>
+                    <div class="launch__content__img">
+                        <a href="javascript:void(0)">
+                            <img data-src="./images/group-17.png" alt="" width="187" height="56" loading="lazy" class="lazy">
+                        </a>
+                        <a href="javascript:void(0)">
+                            <img data-src="./images/playstore.png" alt="" width="187" height="56" loading="lazy" class="lazy">
+                        </a>
+                    </div>
+                    <form action="" onsubmit="return false">
+                        <input type="email" name="email" placeholder="Enter Your Email ID For Updates">
+                        <button class="button_secondary">Sign Up</button>
+                    </form>
+                </div>    
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="row container">
+            <ul class="col_12 col_md_6 col_lg_2">
+                <h4>About</h4>
+                <li><a href="javascript:void(0)">Press</a></li>
+                <li><a href="javascript:void(0)">Careers</a></li>
+                <li><a href="javascript:void(0)">Jobs</a></li>
+                <li><a href="javascript:void(0)">Blog</a></li>
+                <li><a href="javascript:void(0)">Fas</a></li>
+            </ul>
+            <ul class="col_12 col_md_6 col_lg_2">
+                <h4>Search By</h4>
+                <li><a href="javascript:void(0)">Doctor Name</a></li>
+                <li><a href="javascript:void(0)">Profession Name</a></li>
+                <li><a href="javascript:void(0)">Speciality</a></li>
+                <li><a href="javascript:void(0)">Procedure</a></li>
+                <li><a href="javascript:void(0)">Language</a></li>
+            </ul>
+            <ul class="col_12 col_md_6 col_lg_2">
+                <h4>Cities</h4>
+                <li><a href="javascript:void(0)">Bangalore</a></li>
+                <li><a href="javascript:void(0)">Bangalore</a></li>
+                <li><a href="javascript:void(0)">Bangalore</a></li>
+                <li><a href="javascript:void(0)">Bangalore</a></li>
+                <li><a href="javascript:void(0)">Bangalore</a></li>
+            </ul>
+            <ul class="col_12 col_md_6 col_lg_2">
+                <h4>Specialities</h4>
+                <li><a href="javascript:void(0)">Chiropractors</a></li>
+                <li><a href="javascript:void(0)">Cardiologists</a></li>
+                <li><a href="javascript:void(0)">Dermatalogists</a></li>
+                <li><a href="javascript:void(0)">Dentist</a></li>
+                <li><a href="javascript:void(0)">Eye Doctors</a></li>
+            </ul>
+            <ul class="col_12 col_md_6 col_lg_2">
+                <h4>Are You A Doctor?</h4>
+                <li><a href="javascript:void(0)">List Your Practice</a></li>
+            </ul>
+            <ul class="col_12 col_md_6 col_lg_2">
+                <h4>Follow Us</h4>
+                <div class="row">
+                    <li class="col_lg_6 col_xl_3"><a href="javascript:void(0)">
+                        <svg x="0px" y="0px" viewBox="0 0 112.196 112.196" style="enable-background:new 0 0 112.196 112.196;" 
+                        xml:space="preserve" width="40px" height="40px">
+                    <g>
+                        <circle style="fill:white;" cx="56.098" cy="56.098" r="56.098"/>
+                        <path style="fill:#00556b;" d="M70.201,58.294h-10.01v36.672H45.025V58.294h-7.213V45.406h7.213v-8.34
+                            c0-5.964,2.833-15.303,15.301-15.303L71.56,21.81v12.51h-8.151c-1.337,0-3.217,0.668-3.217,3.513v7.585h11.334L70.201,58.294z"/>
+                    </g>
+                    </svg>
+                    
+                    </a></li>
+                    <li class="col_lg_6 col_xl_3"><a href="javascript:void(0)">
+                        <svg id="Layer_1" x="0px" y="0px" viewBox="0 0 291.319 291.319" style="enable-background:new 0 0 291.319 291.319;" xml:space="preserve" width="40px" height="40px"><g><g>
+                            <path style="fill:#FFFFFF" d="M145.659,0c80.44,0,145.66,65.219,145.66,145.66S226.1,291.319,145.66,291.319S0,226.1,0,145.66   S65.21,0,145.659,0z" data-original="#3F729B" class="active-path" data-old_color="#3F729B"/>
+                            <path style="fill:#00556B" d="M195.93,63.708H95.38c-17.47,0-31.672,14.211-31.672,31.672v100.56   c0,17.47,14.211,31.672,31.672,31.672h100.56c17.47,0,31.672-14.211,31.672-31.672V95.38   C227.611,77.919,213.4,63.708,195.93,63.708z M205.908,82.034l3.587-0.009v27.202l-27.402,0.091l-0.091-27.202   C182.002,82.116,205.908,82.034,205.908,82.034z M145.66,118.239c22.732,0,27.42,21.339,27.42,27.429   c0,15.103-12.308,27.411-27.42,27.411c-15.121,0-27.42-12.308-27.42-27.411C118.23,139.578,122.928,118.239,145.66,118.239z    M209.65,193.955c0,8.658-7.037,15.704-15.713,15.704H97.073c-8.667,0-15.713-7.037-15.713-15.704v-66.539h22.759   c-2.112,5.198-3.305,12.299-3.305,18.253c0,24.708,20.101,44.818,44.818,44.818s44.808-20.11,44.808-44.818   c0-5.954-1.193-13.055-3.296-18.253h22.486v66.539L209.65,193.955z" data-original="#FFFFFF" class="" data-old_color="#FFFFFF"/>
+                        </g></g> </svg>
+                    </a></li>
+                    <li class="col_lg_6 col_xl_3"><a href="javascript:void(0)">
+                        <svg height="40px" viewBox="0 0 512 512" width="40px" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="white" d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm116.886719 199.601562c.113281 2.519532.167969 5.050782.167969 7.59375 0 77.644532-59.101563 167.179688-167.183594 167.183594h.003906-.003906c-33.183594 0-64.0625-9.726562-90.066406-26.394531 4.597656.542969 9.277343.8125 14.015624.8125 27.53125 0 52.867188-9.390625 72.980469-25.152344-25.722656-.476562-47.410156-17.464843-54.894531-40.8125 3.582031.6875 7.265625 1.0625 11.042969 1.0625 5.363281 0 10.558593-.722656 15.496093-2.070312-26.886718-5.382813-47.140624-29.144531-47.140624-57.597657 0-.265624 0-.503906.007812-.75 7.917969 4.402344 16.972656 7.050782 26.613281 7.347657-15.777343-10.527344-26.148437-28.523438-26.148437-48.910157 0-10.765624 2.910156-20.851562 7.957031-29.535156 28.976563 35.554688 72.28125 58.9375 121.117187 61.394532-1.007812-4.304688-1.527343-8.789063-1.527343-13.398438 0-32.4375 26.316406-58.753906 58.765625-58.753906 16.902344 0 32.167968 7.144531 42.890625 18.566406 13.386719-2.640625 25.957031-7.53125 37.3125-14.261719-4.394531 13.714844-13.707031 25.222657-25.839844 32.5 11.886719-1.421875 23.214844-4.574219 33.742187-9.253906-7.863281 11.785156-17.835937 22.136719-29.308593 30.429687zm0 0"/></svg>
+                    </a></li>
+                    <li class="col_lg_6 col_xl_3"><a href="javascript:void(0)">
+                        <svg height="40px" viewBox="0 0 512 512" width="40px" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm-74.390625 387h-62.347656v-187.574219h62.347656zm-31.171875-213.1875h-.40625c-20.921875 0-34.453125-14.402344-34.453125-32.402344 0-18.40625 13.945313-32.410156 35.273437-32.410156 21.328126 0 34.453126 14.003906 34.859376 32.410156 0 18-13.53125 32.402344-35.273438 32.402344zm255.984375 213.1875h-62.339844v-100.347656c0-25.21875-9.027343-42.417969-31.585937-42.417969-17.222656 0-27.480469 11.601563-31.988282 22.800781-1.648437 4.007813-2.050781 9.609375-2.050781 15.214844v104.75h-62.34375s.816407-169.976562 0-187.574219h62.34375v26.558594c8.285157-12.78125 23.109375-30.960937 56.1875-30.960937 41.019531 0 71.777344 26.808593 71.777344 84.421874zm0 0"/></svg>
+                    </a></li>
+                </ul>
+
+        </div>
+
+    </footer>
+</body>
+</html>
